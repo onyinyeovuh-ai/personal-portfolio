@@ -15,7 +15,7 @@ header {
     position: sticky;
     top: 0;
     width: 100%;
-    height: 100px;
+    height: 4.5rem;
     z-index: 50;
     background-color: rgb(1, 1, 24);
     
@@ -26,7 +26,8 @@ header nav {
     flex-direction: row;
     justify-content: space-between;
     align-items: center;
-    color: rgb(21, 145, 145)  
+    color: rgb(21, 145, 145); 
+    padding: 0 2rem; 
 }
 
 header ul {
@@ -96,48 +97,52 @@ div #hero h2 {
 
 .about-me-intro {
     width: 100%;
-    max-width: 25rem;
-    margin: 3rem auto;
+    max-width: 70rem;
+    padding: 0 2rem;
     display: grid;
     grid-template-columns: repeat(2, 1fr);
-    grid-template-rows: repeat(auto);
     gap: 2rem;
-}
-
-.about-me-intro div:nth-child(1) {
-    grid-column: 1/2;
-    grid-row: 1/2;
-
-}
-
-.about-me-intro div:nth-child(2) {
-    grid-column: 2/3;
-    grid-row: 1/2;
-}
-
-.about-me-intro h3 {
-    margin-bottom: 1rem;
-    color: black;   
 }
 
 .about-me-intro img {
     width: 100%;
     height: 70%;
+    object-fit: cover;
+    border-radius: 10px; 
+}
+
+.about-me-intro-bio {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1rem;
 
 }
 
-.about-me p {
-    text-align: justify; 
-    
+.about-me-intro-bio p {
+   text-align: justify;   
 }
 
 p.sentence:first-line {
     color: brown;
 }
 
+.skills-heading {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 2rem;
+    font-weight: bold;
+}
+
+.skills-heading p {
+    font-size: 1.2rem;
+}
+
 .skills-intro {
-    margin: 2rem;
-    padding: 20px;
+    border-bottom: 1px solid rgb(1, 1, 24, 0.3);
+    padding: 0 2rem;
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     grid-template-rows: repeat(auto auto);
@@ -201,26 +206,58 @@ p.sentence:first-line {
     scale: 1.5;
 }
 
+/* Projects*/
+
+.projects-heading {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 0.8rem;
+    align-items: center;
+    margin-top: 2rem;
+    margin-bottom: 2rem;
+    padding: 0 2rem;
+    font-weight: bold;
+}
+
+.projects-heading div>h4 {
+    text-transform: capitalize;
+}
+
+.projects-heading p{
+    font-size: 1.2rem;
+}
+
 .projects-intro {
-    padding: 1rem 0.5rem;
+    padding: 0 2rem;
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     grid-template-rows: repeat(auto);
     gap: 1rem;
+    border-bottom: 
 }
 
 .projects-intro div {
     border: 1px solid black;
-    background-color: rgb(131, 49, 49)
+    background-color: rgb(131, 49, 49);
+    border-radius: 10px;
+    text-align: center;
 }
 
 .projects-intro ul li {
     list-style-type: none;
 }
 
+.projects-intro li > h4 {
+    font-size: bold;
+    color: black;
+    margin-bottom: 1rem;
+    text-transform: uppercase;
+}
+
 .projects-intro img {
     width: 100%;
-    height: 100%;
+    height: 60%;
     object-fit: cover;
     transition: 0.3s ease ease-in-out 1s;
 }
@@ -235,7 +272,7 @@ p.sentence:first-line {
 
 .projects-intro ul li:nth-child(1) {
     grid-column: 1/2;
-    grid-row: 1/3;
+    grid-row: 1/2;
     overflow: hidden;
 }
  
@@ -275,52 +312,98 @@ p.sentence:first-line {
     text-decoration: none;
 }
 
+.projects-intro div > li a {
+    border: 10px;
+}
+
+
+#Contact {
+    border-radius: 10px;
+    margin-bottom: 2rem;
+}
+
+.contact-hub {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 2rem;
+    margin: 2rem;
+    font-size: 1.2rem;
+    text-align: justify;
+}
+
+.contact-hub h5 {
+    font-weight: bold;
+    font-size: larger;
+}
+
+.contact-hub p {
+    font-size: medium;
+}
+
 .contact {
-    margin-top: 2rem auto;
+    background-color: rgb(21, 145, 145,0.1);;
+    padding: 0 2rem;
     display: grid;
     grid-template-columns: repeat(2, 1fr);
-    grid-template-rows: (auto);
+    gap: 2rem;
+}
+
+.contact form {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
     gap: 1rem;
 }
+
 .contact div {
     padding: 2px 4px;
-    border: 1px solid black;
+    
     gap: 2px;
-}
-
-.contact div:nth-child(1) {
-    grid-template-columns: 1/2;
-    grid-template-rows: 1/2;
-}
-
-.contact div:nth-child(2) {
-    grid-template-columns: 2/3;
-    grid-template-rows: 1/2;
 }
 
 .contact h5 {
     margin-bottom: 1rem;
+    font-size: 1.1rem;
 
 }
 
-.contact div > p {
-    margin-bottom: 1rem;
-
+.links {
+    border: 1px solid rgb(21, 145, 145);
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
 }
 
 .copyrite {
     background-color: rgb(1, 1, 24);
     color: white;
-    text-decoration: underline;
+    border-top: 1px s0lid black;
+    display: flex;
+    flex-direction: row;
     justify-content: center;
     align-items: center;
-    height: 50px 
+    gap: 2rem;
+    height: 4.5rem; 
+    position: sticky;
+    bottom: 0;
+    z-index: 50;
+}
+
+.copyrite p:hover{
+    text-decoration: underline;
+    color: rgb(21, 145, 145);
+    font-size: 1.2rem;
 }
 
 @media(max-width: 768px) {
     .about-me-intro
     .skills-intro
-    .projects-intro {
+    .projects-intro 
+    .contact {
     grid-template-columns: 1fr;
     }
 }
